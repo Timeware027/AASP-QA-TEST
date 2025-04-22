@@ -27,6 +27,7 @@ Antes de começar, você precisa ter instalado:
 2. **NPM** (gerenciador de pacotes do Node.js)
 3. **Chrome** ou **Firefox** (navegador para execução dos testes)
 4. **ChromeDriver** ou **GeckoDriver** (driver do Selenium para o navegador escolhido)
+5. **Java JDK**
 
 ### Instalação do ChromeDriver/GeckoDriver
 
