@@ -2,6 +2,23 @@
 
 Este projeto contém testes automatizados para o sistema AASP utilizando Selenium WebDriver, Mocha e Allure para relatórios.
 
+## ⚠️ Aviso Importante - Limpeza de Registros
+
+Antes de executar os testes, é **EXTREMAMENTE IMPORTANTE** limpar os registros criados em execuções anteriores. Os testes criam os seguintes registros que devem ser removidos:
+
+### Registros de Pessoa
+- Nome: "Vinícius Nascimento Borges"
+- CPF: "53279822890"
+
+### Registros de Empresa
+- Nome: "Tech Soluções"
+- Nome alternativo: "Company Tech Soluções"
+
+### Registros de Contrato
+- Nome: "Contrato de Teste"
+
+**IMPORTANTE**: A não limpeza desses registros pode causar falhas nos testes, pois eles tentam criar registros com os mesmos dados.
+
 ## 📋 Pré-requisitos
 
 Antes de começar, você precisa ter instalado:
