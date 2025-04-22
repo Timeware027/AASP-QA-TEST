@@ -1,0 +1,52 @@
+{
+  "name": "allure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/main.js --reporter mocha-allure-reporter",
+    "test:all": "mocha test/main.test.js",
+    "test:person": "SUITE=person mocha test/main.js --timeout 30000",
+    "test:company": "SUITE=company mocha test/main.js --timeout 30000",
+    "test:person:happy": "mocha test/suites/person.happy.test.js",
+    "test:person:sad": "mocha test/suites/person.sad.test.js",
+    "test:person:all": "mocha test/suites/person.*.test.js",
+    "test:company:happy": "mocha test/suites/company.happy.test.js",
+    "test:company:sad": "mocha test/suites/company.sad.test.js",
+    "test:company:all": "mocha test/suites/company.*.test.js",
+    "test:contracts:happy": "mocha test/suites/contracts.happy.test.js",
+    "test:contracts:sad": "mocha test/suites/contracts.sad.test.js",
+    "test:contracts:all": "mocha test/suites/contracts.*.test.js",
+    "test:all:happy": "mocha \"test/suites/**/*.happy.test.js\" --timeout 1200000",
+    "test:all:sad": "mocha \"test/suites/**/*.sad.test.js\" --timeout 1200000",
+    "allure:report": "node scripts/generate-report.js",
+    "allure:open": "allure open allure-report",
+    "set:firefox": "node test/config/switch-browser.js firefox",
+    "set:chrome": "node test/config/switch-browser.js chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "allure": "file:",
+    "chromedriver": "^x.x.x",
+    "geckodriver": "^x.x.x",
+    "selenium-webdriver": "^4.x.x"
+  },
+  "type": "module",
+  "devDependencies": {
+    "allure-commandline": "^2.33.0",
+    "allure-js-commons": "^3.2.0",
+    "allure-mocha": "^3.2.0",
+    "fs-extra": "^11.2.0",
+    "mocha": "^11.1.0",
+    "mocha-allure-reporter": "^1.4.0"
+  },
+  "mocha": {
+    "reporter": "allure-mocha",
+    "reporterOptions": [
+      "resultsDir=allure-results",
+      "extraReporters=spec"
+    ]
+  }
+}

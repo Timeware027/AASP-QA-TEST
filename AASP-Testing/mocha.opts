@@ -1,0 +1,2 @@
+--reporter mocha-allure-reporter
+--timeout 60000
